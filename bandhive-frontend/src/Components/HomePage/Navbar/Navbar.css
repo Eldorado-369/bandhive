@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 5rem;
+    color: #fff;
+}
+
+.nav-logo {
+    font-family: "Outfit", sans-serif;
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    cursor: pointer;
+    font-family: Georgia;
+}
+
+button.transparent-button {
+    font-size: 18px;
+    font-weight: 700; 
+    letter-spacing: 0.8px; 
+    border: none;
+    background: transparent; 
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+button.transparent-button:hover {
+    transform: scale(1.05);
+    color: #f0f0f0; 
+}

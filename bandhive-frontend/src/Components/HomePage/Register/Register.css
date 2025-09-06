@@ -1,0 +1,201 @@
+/* Full-Page Layout */
+.register-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+  color: #ffffff;
+  padding: 80px 20px;
+}
+
+.register-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+}
+
+.register-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.band-registration-card {
+  background: linear-gradient(135deg, rgba(22, 96, 143, 0.9), rgba(107, 45, 92, 0.9));
+  border-radius: 15px;
+  padding: 40px;
+  overflow: hidden;
+  border: 2px solid transparent; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  position: relative;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.band-registration-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-color: #ff6b6b; 
+  animation: pulse 1.5s infinite; 
+}
+
+.customer-registration-card {
+  background: linear-gradient(135deg, rgba(143, 22, 96, 0.9), rgba(45, 92, 107, 0.9));
+  border-radius: 15px;
+  padding: 40px;
+  overflow: hidden;
+  border: 2px solid transparent; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  position: relative;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.customer-registration-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-color: #3498db; 
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateY(-10px) scale(1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    transform: translateY(-10px) scale(1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.card-header {
+  margin-bottom: 25px;
+}
+
+.band-registration-card h3,
+.customer-registration-card h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+}
+
+.card-subtitle {
+  display: block;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.band-registration-card p,
+.customer-registration-card p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.benefits-list li {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 15px 0;
+  position: relative;
+  padding-left: 25px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.benefits-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+/* Button Styles */
+.register-btn {
+  width: 100%;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.band-registration-card .register-btn {
+  background: #e74c3c;
+}
+
+.band-registration-card .register-btn:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+.customer-registration-card .register-btn {
+  background: #3498db;
+}
+
+.customer-registration-card .register-btn:hover {
+  background: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Animation */
+.fade-in-view {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .band-registration-card,
+  .customer-registration-card {
+    padding: 30px;
+  }
+}
