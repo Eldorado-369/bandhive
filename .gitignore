@@ -1,4 +1,6 @@
-node_modules/
+bandhive-frontend/src/assets/*.mp4
+bandhive-frontend/src/assets/*.jpg
+bandhive-frontend/src/assets/*.png
 venv/
 *.pyc
 __pycache__/
@@ -6,4 +8,5 @@ db.sqlite3
 *.log
 *.bat
 *.env
-/media/
+media/
+Project Screenshot/
